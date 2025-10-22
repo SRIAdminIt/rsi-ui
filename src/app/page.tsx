@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   const appName = process.env.NEXT_PUBLIC_APP_NAME || "Racquet Sports Institute";
   const backend = process.env.NEXT_PUBLIC_BACKEND_URL || "";
@@ -15,14 +17,11 @@ export default function Home() {
       </div>
 
       {backend && (
-        <a
-          href={`${backend}/health`}
-          target="_blank"
-          rel="noreferrer"
-          className="btn-brand"
-        >
-          Backend Health öffnen
-        </a>
+        <Button asChild>
+          <a href={`${backend}/health`} target="_blank" rel="noreferrer">
+            Backend Health öffnen
+          </a>
+        </Button>
       )}
     </main>
   );
