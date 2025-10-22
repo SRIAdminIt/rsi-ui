@@ -18,8 +18,8 @@ export default function Home() {
         <a
           href={`${backend}/health`}
           target="_blank"
-          className="inline-block rounded-2xl px-4 py-2 text-white"
-          style={{ background: "var(--brand-primary)" }}
+          rel="noreferrer"
+          className="btn-brand"
         >
           Backend Health öffnen
         </a>
