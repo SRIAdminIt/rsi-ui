@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { UpgradeModal } from "@/components/upgrade-modal";
 
 export default function Home() {
   const appName = process.env.NEXT_PUBLIC_APP_NAME || "Racquet Sports Institute";
@@ -16,13 +17,17 @@ export default function Home() {
         </div>
       </div>
 
-      {backend && (
-        <Button asChild>
-          <a href={`${backend}/health`} target="_blank" rel="noreferrer">
-            Backend Health öffnen
-          </a>
-        </Button>
-      )}
+      {/* <-- HIER unter dem Brand-Preview-Block einfügen */}
+      <div className="flex gap-3">
+        <UpgradeModal />
+        {backend && (
+          <Button asChild>
+            <a href={`${backend}/health`} target="_blank" rel="noreferrer">
+              Backend Health öffnen
+            </a>
+          </Button>
+        )}
+      </div>
     </main>
   );
 }
