@@ -2,18 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* RSI base */
-html, body {
-  height: 100%;
-  background: #F9FAFB;  /* helles, ruhiges Grau */
-  color: #111827;       /* neutraler Text */
-}
-
-/* Kleine Hilfsklasse, nutzt die Brand-Variablen aus layout.tsx */
-.btn-brand {
-  @apply inline-block rounded-2xl px-4 py-2 text-white;
-  background: var(--brand-primary);
-}
-.btn-brand:hover {
-  filter: brightness(0.95);
+:root { color-scheme: light; }
+html, body { height: 100%; }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
